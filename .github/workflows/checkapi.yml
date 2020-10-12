@@ -15,7 +15,7 @@ jobs:
         run: >
           echo 'Checks every 30 minutes for the top 68 BPs on EOS for their Homepage 
           as returned by get_producers, appends bp.json to their site and extracts api_endpoint. 
-          ToDo: catch parse errors (fromjson? does not catch), check site for other locations than main path for bp.json, 
+          ToDo: catch parse errors, check site for other locations than main path for bp.json, 
           set timeout, check for payment so that BPs are not at fixed 68 value.' > README.md
       - name: Fetch BPs and Urls
         run: |
@@ -23,7 +23,7 @@ jobs:
           jq -r '.rows[] | .url'`
           for value in $BPS
           do
-            curl -s $value/bp.json jq -R 'fromjson?' | jq -rn '.nodes | .[].api_endpoint'  
+            curl -s $value/bp.json | jq -r '.nodes | .[].api_endpoint'  
           done >> README.md
       - name: Commit Files
         run: |
