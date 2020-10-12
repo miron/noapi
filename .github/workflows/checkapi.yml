@@ -13,8 +13,12 @@ jobs:
       - uses: actions/checkout@master
       - name: Fetch BPs and Urls
         run:  |
-          curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "68", "json": true}' | 
-          jq -r '.rows[] | .owner + " " +  .url' > bps.txt
+          BPS=`curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "68", "json": true}' | 
+          jq -r '.rows[] | .owner + " " +  .url'`
+          for value in $BPS
+          do
+            curl -s $value/bp.json | jq -r '.nodes | .[].api_endpoint'  
+          done
       - name: Commit Files
         run: |
           git config --local user.name "miron"
