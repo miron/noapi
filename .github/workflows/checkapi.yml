@@ -12,11 +12,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Fetch BPs
-        run:  curl -L api.eosn.io/v1/chain/get_producers
+      - name: Fetch BPs and urls
+        run:  curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "68","json": true}' | jq '.rows[] | .owner + " " +  .url'
 
-      # Runs a set of commands using the runners shell
-      - name: echo and jq
-        run: |
-          echo Add other actions to build,
-          jq
