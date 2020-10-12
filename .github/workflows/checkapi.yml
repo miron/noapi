@@ -26,13 +26,13 @@ jobs:
             curl -s $value/bp.json | jq -r '.nodes | .[].api_endpoint'  
           done >> README.md
       - name: Commit Files
-        if: allways()
+        if: always()
         run: |
           git config --local user.name "miron"
           git add .
           git commit -m "fresh BP list"
       - name: Push Changes
-        if: allway()
+        if: alway()
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
