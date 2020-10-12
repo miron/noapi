@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: Fetch BPs and urls
         run:  |
-          curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "68", "json": true}' | jq '.rows[] | .owner + " " +  .url'
+          curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "68", "json": true}' | jq '.rows[] | .owner + " " +  .url' > bps.md
 
