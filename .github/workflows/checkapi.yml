@@ -17,7 +17,8 @@ jobs:
       - name: Commit Files
         run: |
           git config --local user.name "miron"
-          git commit -m "fresh BP list" -a
+          git add .
+          git commit -m "fresh BP list"
       - name: Push Changes
         uses: ad-m/github-push-action@master
         with:
