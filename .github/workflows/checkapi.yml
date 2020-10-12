@@ -23,8 +23,7 @@ jobs:
           jq -r '.rows[] | .url'`
           for value in $BPS
           do
-            curl -s $value/bp.json | jq -r '.nodes | .[].api_endpoint | select(. == null | not) + "  "'
-
+            curl -s $value/bp.json | jq -R 'fromjson?' | jq -r '.nodes | .[].api_endpoint | select(. == null | not) + "  "'
           done >> README.md
       - name: Commit Files
         if: always()
