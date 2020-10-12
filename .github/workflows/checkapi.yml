@@ -12,4 +12,7 @@ jobs:
       - name: Fetch BPs and urls
         run:  |
           curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "68", "json": true}' | jq '.rows[] | .owner + " " +  .url' > bps.md
+          git add .
+          git commit -m "fresh list of block producers"
+          git push
 
