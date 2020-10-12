@@ -9,10 +9,15 @@ jobs:
   get_bps:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch BPs and urls
+      - name: Fetch BPs and Urls
         run:  |
           curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "68", "json": true}' | jq '.rows[] | .owner + " " +  .url' > bps.md
+      - name: Commit Files
+        run: |
+          git config --local user.name "mironn"
           git add .
-          git commit -m "fresh list of block producers"
-          git push
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
