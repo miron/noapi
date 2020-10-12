@@ -12,11 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Fetch BPs and Urls
-        run:  |
-          echo 'Checks every 30 minutes for the top 68 BPs on EOS for their Homepage as returned by \ 
-          get_producers, appends bp.json to their site and extracts api_endpoint. \
-          ToDo: catch parse errors (fromjson? doesn't catch), check site for other \
-          locations than main path for bp.json, set timeout, check for payment \
+        run:  >-
+          echo 'Checks every 30 minutes for the top 68 BPs on EOS for their Homepage as returned by  
+          get_producers, appends bp.json to their site and extracts api_endpoint. 
+          ToDo: catch parse errors (fromjson? doesn't catch), check site for other 
+          locations than main path for bp.json, set timeout, check for payment 
           so that BPs are not at fixed 68 value.' > README.md
 
           BPS=`curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "68", "json": true}' | 
