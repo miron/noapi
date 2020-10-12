@@ -9,9 +9,6 @@ jobs:
   get_bps:
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
       - name: Fetch BPs and urls
         run:  |
           curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "68", "json": true}' | jq '.rows[] | .owner + " " +  .url'
