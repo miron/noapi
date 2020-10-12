@@ -10,6 +10,7 @@ jobs:
   get_bps:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@master
       - name: Fetch BPs and Urls
         run:  |
           curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "68", "json": true}' | jq '.rows[] | .owner + " " +  .url' > bps.md
