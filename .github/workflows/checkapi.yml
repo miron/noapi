@@ -17,7 +17,7 @@ jobs:
           jq -r '.rows[] | .owner + " " +  .url'`
           for value in $BPS
           do
-            curl -s $value/bp.json | jq -r '.nodes | .[].api_endpoint'  
+            curl -s $value/bp.json | jq -rn '.nodes | .[].api_endpoint'  
           done
       - name: Commit Files
         run: |
