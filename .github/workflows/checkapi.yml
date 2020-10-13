@@ -10,7 +10,7 @@ jobs:
   get_bps:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v1
       - name: check out with ssh
         run: git remote set-url origin ${{ secrets.ssh }} 
         #with:
