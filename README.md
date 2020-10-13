@@ -16,13 +16,12 @@ http://eos.newdex.one
 http://eos-bp.bitfinex.com:8888  
   
 http://mainnet.eoscannon.io  
-http://mainnet.meet.one  
 http://eosapi.okpool.me  
+http://mainnet.meet.one  
 http://api.eosrapid.com:8888  
 https://node1.zbeos.com  
 http://api1.eosasia.one  
 http://api.eos.wiki  
   
-http://mainnet.eosio.sg  
 http://api.binance-eos.com  
   
