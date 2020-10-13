@@ -13,13 +13,13 @@ jobs:
       - uses: actions/checkout@master
       - name: Readme Text
         run: >
-          echo 'Scheduled Github Action which checks every hour the top 68 BPs on EOS for homepage 
-          as returned by get_producers, appends bp.json to site and extracts api_endpoints.   
-          ToDo: 
-          - check sites for other locations than main path for bp.json
-          - check for payment so that BPs are not at fixed 68 value
-          - rotate used api for curl
-          
+          echo 'Scheduled Github Action checking every hour top 68 BPs on EOS for homepage  
+          as returned by get_producers, appending and extracting api_endpoints.   
+          ToDo:  
+          - check sites for other locations than main path for bp.json  
+          - check for payment so that BPs are not at fixed 68 value  
+          - rotate used api for curl  
+            
           ' > README.md
       - name: Fetch BPs and Urls
         run: |
