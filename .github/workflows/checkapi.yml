@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: check out with ssh
-        run: git remote set-url origin ${{ secrets.ssh }} 
+        run: git remote set-url origin git@github.com:b342203fc208d541378ff64b2236f55f.git
         #with:
          # name: miron/b342203fc208d541378ff64b2236f55f
           #token: ${{ secrets.my_pat }}
