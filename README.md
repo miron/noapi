@@ -23,5 +23,3 @@ https://node1.zbeos.com
 http://api1.eosasia.one  
 http://api.eos.wiki  
   
-http://api.binance-eos.com  
-  
