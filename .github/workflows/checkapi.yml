@@ -41,12 +41,13 @@ jobs:
       - name: Commit Files
         if: always()
         run: |
-          git config --local user.name "miron"
+          #git config --local user.name "miron"
           git add .
           git commit -m "fresh BP list"
-      - name: Push Changes
-        if: always()
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git push origin HEAD:master
+      #- name: Push Changes
+       # if: always()
+        #uses: ad-m/github-push-action@master
+        #with:
+         # github_token: ${{ secrets.GITHUB_TOKEN }}
 
