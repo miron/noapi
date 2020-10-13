@@ -11,8 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+        with:
+          name: miron/b342203fc208d541378ff64b2236f55f
+          ref: refs/heads/release
       - name: Clone Gist
-        run: git clone git@github.com:b342203fc208d541378ff64b2236f55f.git
+        #run: git clone git@github.com:b342203fc208d541378ff64b2236f55f.git
 
       - name: Readme Text
         run: >
