@@ -1,4 +1,4 @@
-Scheduled Github Action which checks every hour the top 68 BPs on EOS for Homepage  as returned by get_producers, appends bp.json to site and extracts api_endpoint.  ToDo: catch parse errors, check site for other locations than main path for bp.json,  set timeout, check for payment so that BPs are not at fixed 68 value.
+Scheduled Github Action which checks every hour the top 68 BPs on EOS for homepage  as returned by get_producers, appends bp.json to site and extracts api_endpoints.    ToDo: check sites for other locations than main path for bp.json,  check for payment so that BPs are not at fixed 68 value.
 http://api.eosn.io  
 http://api.eoseoul.io  
   
