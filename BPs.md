@@ -7,6 +7,7 @@ http://eosbp.atticlab.net
 http://api-mainnet.starteos.io  
 http://eos.infstones.io:8888  
 http://api.eoslaomao.com  
+http://api.bitmars.one  
 http://peer1.eoshuobipool.com:8181  
 http://peer2.eoshuobipool.com:8181  
 http://bp.whaleex.com  
