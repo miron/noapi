@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@master
         with:
           name: miron/b342203fc208d541378ff64b2236f55f
+          token: ${{ secrets.my_pat }}
           #ref: refs/heads/release
       #- name: Clone Gist
         #run: git clone git@github.com:b342203fc208d541378ff64b2236f55f.git
