@@ -20,9 +20,9 @@ http://mainnet.meet.one
 http://eosapi.okpool.me  
 http://api.eosrapid.com:8888  
 https://node1.zbeos.com  
+http://api1.eosasia.one  
 http://api.eos.wiki  
   
-http://api1.eosasia.one  
 http://mainnet.eosio.sg  
 http://api.binance-eos.com  
   
