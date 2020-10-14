@@ -11,16 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: '0'
-          ref: 'master'
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          name: id_rsa  
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
-      - run: |
+        run: |
           git remote add gist git@github.com:b342203fc208d541378ff64b2236f55f.git
           #git config --local user.name "miron"
           git config --global user.name "miron"
