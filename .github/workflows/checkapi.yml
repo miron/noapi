@@ -21,7 +21,7 @@ jobs:
           jq -r '.rows[] | .url'`
           for value in $BPS
           do
-            curl -s -L -m 10 $value/bp.json | jq -j -r '.nodes | .[].api_endpoint | select(. == null | not) + "  "' || continue
+            curl -s -L -m 10 $value/bp.json | jq -j -r '.nodes | .[].api_endpoint | select(. == null | not) + "  "'; printf "  \n" || continue
           done > BPs.md
       - name: Commit Files
         run: |
