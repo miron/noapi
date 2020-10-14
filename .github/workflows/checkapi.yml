@@ -14,9 +14,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: miron/b342203fc208d541378ff64b2236f55f
-          token: ${{ secrets.gist }}
+          #token: ${{ secrets.gist }}
           #path: gist  
-          ref: refs/heads/master
+          #ref: refs/heads/master
       #- name: Clone Gist
         #run: git clone git@github.com:b342203fc208d541378ff64b2236f55f.git
 
