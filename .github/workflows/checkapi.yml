@@ -18,6 +18,7 @@ jobs:
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          name: id_rsa  
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
       - run: |
           git remote add gist git@github.com:b342203fc208d541378ff64b2236f55f.git
