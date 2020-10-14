@@ -3,7 +3,6 @@ name: API Check
 on: 
   push:
   schedule:
-    # * is a special character in YAML so you have to quote this string
     - cron:  '*/60 * * * *'
 
 jobs:
@@ -14,13 +13,8 @@ jobs:
         uses: actions/checkout@d1cef55e
         with:
           gist: miron/b342203fc208d541378ff64b2236f55f
-          #repository: ${{ null }}/b342203fc208d541378ff64b2236f55f
           ssh-key: ${{ secrets.SSH_KEY }}
-          #ssh-strict: false  
           ssh-known-hosts: ${{ secrets.KNOWN_HOSTS }}  
-      #- name: Clone Gist
-        #run: git clone git@github.com:b342203fc208d541378ff64b2236f55f.git
-
       - name: Readme Text
         run: >
           echo 'Scheduled Github Action checking every hour top 68 BPs on EOS for homepage  
@@ -40,15 +34,8 @@ jobs:
             curl -s -L -m 10 $value/bp.json | jq -r '.nodes | .[].api_endpoint | select(. == null | not) + "  "' || continue
           done > BPs.md
       - name: Commit Files
-        #if: always()
         run: |
           git config --local user.name "miron"
           git add .
           git commit -m "fresh BP list"
           git push
-      #- name: Push Changes
-        #if: always()
-        #uses: ad-m/github-push-action@master
-        #with:
-         # github_token: ${{ secrets.GITHUB_TOKEN }}
-
