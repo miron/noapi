@@ -17,7 +17,7 @@ jobs:
           ssh-known-hosts: ${{ secrets.KNOWN_HOSTS }}  
       - name: Fetch BPs and Urls
         run: |
-          BPS=`curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "69", "json": true}' | 
+          BPS=`curl -s api.eosn.io/v1/chain/get_producers -d '{"limit": "69", "json": true}' | 
           jq -r '.rows[] | .url'`
           while read bp; do
             if sane=`curl -s -L -m 10 -k "$bp/bp.json"`; then
