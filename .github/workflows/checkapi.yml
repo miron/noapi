@@ -44,9 +44,10 @@ jobs:
           git config --local user.name "miron"
           git add .
           git commit -m "fresh BP list"
-      - name: Push Changes
+          git push
+      #- name: Push Changes
         #if: always()
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        #uses: ad-m/github-push-action@master
+        #with:
+         # github_token: ${{ secrets.GITHUB_TOKEN }}
 
