@@ -41,7 +41,7 @@ jobs:
       - name: Commit Files
         if: always()
         run: |
-          #git config --local user.name "miron"
+          git config --local user.name "miron"
           git add .
           git commit -m "fresh BP list"
           git push origin HEAD:master
