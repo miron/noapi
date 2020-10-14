@@ -46,14 +46,14 @@ jobs:
       - name: Commit Files
         if: always()
         run: |
-          git remote add origin git@github.com:b342203fc208d541378ff64b2236f55f.git
+          git remote add gist git@github.com:b342203fc208d541378ff64b2236f55f.git
           #git config --local user.name "miron"
           git config --global user.name "miron"
           git checkout master
           #git add .
           #git commit -m "fresh BP list"
           #git push origin HEAD:master
-          git push -u origin master
+          git push -u gist master
       #- name: Push Changes
        # if: always()
         #uses: ad-m/github-push-action@master
