@@ -8,19 +8,19 @@ http://api-mainnet.starteos.io
 http://eos.infstones.io:8888  
 http://api.eoslaomao.com  
 http://api.bitmars.one  
+http://api.helloeos.com.cn  
 http://peer1.eoshuobipool.com:8181  
 http://peer2.eoshuobipool.com:8181  
 http://bp.whaleex.com  
-http://api.helloeos.com.cn  
-http://eos.newdex.one  
 http://eos-bp.bitfinex.com:8888  
   
-http://mainnet.eoscannon.io  
 http://eosapi.okpool.me  
-http://mainnet.meet.one  
 http://api.eosrapid.com:8888  
-https://node1.zbeos.com  
+http://eos.newdex.one  
+http://mainnet.eoscannon.io  
+http://mainnet.meet.one  
 http://api1.eosasia.one  
+https://node1.zbeos.com  
 http://api.eos.wiki  
   
 http://api.binance-eos.com  
@@ -47,25 +47,25 @@ http://publicapi-mainnet.eosauthority.com
 http://api.main.alohaeos.com  
 http://api.eosargentina.io  
 http://eos.eoscafeblock.com  
-http://api.eostitan.com  
-  
-http://api.eos.cryptolions.io  
+http://epeer1.nodeone.io:8870  
+http://epeer3.nodeone.io:8880  
 http://api.cypherglass.com  
   
   
+http://api.eostitan.com  
+  
+http://api.eos.cryptolions.io  
 api.eos42.io:8882  
-http://epeer1.nodeone.io:8870  
-http://epeer3.nodeone.io:8880  
+http://api.eosrio.io  
+http://eos.hyperion.eosrio.io  
   
 http://api.hkeos.com  
 http://eu.eosdac.io  
-http://api.eosrio.io  
-http://eos.hyperion.eosrio.io  
 http://eosmainnet.more.top  
-  
-  
-  
 http://eos.eosphere.io  
+  
+  
+  
 http://api.acroeos.one  
 http://bp.dexeos.io  
 http://api.eosrainbow.xyz:8888  
@@ -77,7 +77,5 @@ http://api.athenbp.club:8888
 https://chaingame.club  
 http://api.eos.education  
 http://seed01.eosusa.news  
-http://seed02.eosusa.news  
-  
   
 http://mainnet.eosamsterdam.net  
