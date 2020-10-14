@@ -1,7 +1,7 @@
 name: API Endpoint Check
 
 on: 
-  #push:
+  push:
   schedule:
     - cron:  '*/60 * * * *'
 
@@ -21,7 +21,7 @@ jobs:
           jq -r '.rows[] | .url'`
           while read bp; do
             if sane=`curl -s -L -m 10 "$bp/bp.json"`; then
-              echo "$sane" | jq -j -r '.nodes | .[].api_endpoint | select(. == null | not) + " "'
+              echo "$sane" | jq -j -r '.nodes | .[].api_endpoint | select(. == null | not) + " "'; printf " \n"
             else
               continue
             fi
