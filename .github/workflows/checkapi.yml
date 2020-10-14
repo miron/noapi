@@ -16,7 +16,7 @@ jobs:
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           known_hosts: ${{ secrets.KNOWN_HOSTS }}
-      - name: check out with ssh
+      #- name: check out with ssh
         #run: git remote set-url origin git@github.com:b342203fc208d541378ff64b2236f55f.git
         #with:
          # name: miron/b342203fc208d541378ff64b2236f55f
