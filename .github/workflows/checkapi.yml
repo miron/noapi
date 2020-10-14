@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Gist
         uses: actions/checkout@master
         with:
-          repository: miron/b342203fc208d541378ff64b2236f55f
+          repository: b342203fc208d541378ff64b2236f55f
           token: ${{ secrets.gist }}
           #ref: refs/heads/release
       #- name: Clone Gist
