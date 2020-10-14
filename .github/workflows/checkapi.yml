@@ -1,7 +1,7 @@
 name: API Endpoint Check
 
 on: 
-  push:
+  #push:
   schedule:
     - cron:  '*/60 * * * *'
 
@@ -20,12 +20,12 @@ jobs:
           BPS=`curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "68", "json": true}' | 
           jq -r '.rows[] | .url'`
           while read bp; do
-            if sane=`curl -s -L -m 10 "$bp/json"`; then
+            if sane=`curl -s -L -m 10 "$bp/bp.json"`; then
               echo "$sane" | jq -j -r '.nodes | .[].api_endpoint | select(. == null | not) + " "'
             else
               continue
             fi
-          done <<< "$BPS"
+          done <<< "$BPS" > BP.md
       - name: Commit Files
         run: |
           git config --local user.name "miron"
