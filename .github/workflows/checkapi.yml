@@ -1,7 +1,7 @@
 name: API Check
 
 on: 
-  #push:
+  push:
   schedule:
     - cron:  '*/60 * * * *'
 
@@ -25,7 +25,9 @@ jobs:
           done > BPs.md
       - name: Commit Files
         run: |
-          git config --local user.name "miron"
-          git add .
-          git commit -m "fresh BP list"
-          git push
+          #git config --local user.name "miron"
+            if [ -n "$(git status --porcelain)" ]; then
+            git add .
+            git commit -m "fresh BP list"
+            git push
+          fi
