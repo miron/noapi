@@ -39,13 +39,13 @@ jobs:
             curl -s -L -m 10 $value/bp.json | jq -r '.nodes | .[].api_endpoint | select(. == null | not) + "  "' || continue
           done > BPs.md
       - name: Commit Files
-        if: always()
+        #if: always()
         run: |
           git config --local user.name "miron"
           git add .
           git commit -m "fresh BP list"
       - name: Push Changes
-        if: always()
+        #if: always()
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
