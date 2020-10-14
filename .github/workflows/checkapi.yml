@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Gist
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
         with:
           repository: miron/b342203fc208d541378ff64b2236f55f
           token: ${{ secrets.gist }}
