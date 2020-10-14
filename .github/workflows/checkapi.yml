@@ -19,10 +19,13 @@ jobs:
         run: |
           BPS=`curl -s  api.eosn.io/v1/chain/get_producers -d '{"limit": "68", "json": true}' | 
           jq -r '.rows[] | .url'`
-          for value in $BPS
-          do
-            curl -s -L -m 10 $value/bp.json | jq -j -r '.nodes | .[].api_endpoint | select(. == null | not) + "  "'; printf "  \n" || continue
-          done > BPs.md
+          while read bp; do
+            if sane=`curl -s -L -m 10 "$bp/json"; then
+              echo "$sane" | jq -j -r '.nodes | .[].api_endpoint | select(. == null | not) + " "'
+            else
+              continue
+            done <<< "$BP"
+          fi
       - name: Commit Files
         run: |
           git config --local user.name "miron"
