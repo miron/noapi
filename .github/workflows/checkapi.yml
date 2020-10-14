@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Gist
-        uses: actions/checkout@v2
+        uses: ""/checkout@v2
         with:
           repository: git/b342203fc208d541378ff64b2236f55f
           ssh-key: ${{ secrets.GIST }}
