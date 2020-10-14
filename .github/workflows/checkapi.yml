@@ -16,6 +16,7 @@ jobs:
           gist: miron/b342203fc208d541378ff64b2236f55f
           #repository: ${{ null }}/b342203fc208d541378ff64b2236f55f
           ssh-key: ${{ secrets.GIST }}
+          ssh-strict: false  
           ssh-known-hosts: ${{ secrets.KNOWN_HOSTS }}  
       #- name: Clone Gist
         #run: git clone git@github.com:b342203fc208d541378ff64b2236f55f.git
