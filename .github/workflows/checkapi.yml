@@ -13,7 +13,7 @@ jobs:
       - name: Checkout Gist
         uses: actions/checkout@v2
         with:
-          repository: 0/b342203fc208d541378ff64b2236f55f
+          repository: null/b342203fc208d541378ff64b2236f55f
           ssh-key: ${{ secrets.GIST }}
           ssh-known-hosts: ${{ secrets.KNOWN_HOSTS }}  
       #- name: Clone Gist
