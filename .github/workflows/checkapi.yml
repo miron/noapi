@@ -52,17 +52,17 @@ jobs:
           do
             curl -s -L -m 10 $value/bp.json | jq -r '.nodes | .[].api_endpoint | select(. == null | not) + "  "' || continue
           done > BPs.md
-      - name: Commit Files
-        if: always()
-        run: |
-          git remote add gist git@github.com:b342203fc208d541378ff64b2236f55f.git
+      #- name: Commit Files
+       # if: always()
+        #run: |
+         # git remote add gist git@github.com:b342203fc208d541378ff64b2236f55f.git
           #git config --local user.name "miron"
-          git config --global user.name "miron"
-          git checkout master
+          #git config --global user.name "miron"
+          #git checkout master
           #git add .
           #git commit -m "fresh BP list"
           #git push origin HEAD:master
-          git push -u gist master
+          #git push -u gist master
       #- name: Push Changes
        # if: always()
         #uses: ad-m/github-push-action@master
