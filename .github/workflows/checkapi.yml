@@ -24,8 +24,8 @@ jobs:
               echo "$sane" | jq -j -r '.nodes | .[].api_endpoint | select(. == null | not) + " "'
             else
               continue
-            done <<< "$BP"
-          fi
+            fi
+          done <<< "$BP"
       - name: Commit Files
         run: |
           git config --local user.name "miron"
