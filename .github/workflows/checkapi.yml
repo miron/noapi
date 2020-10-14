@@ -15,7 +15,7 @@ jobs:
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ sectrets.SSH_PRIVATE_KEY }}
-          known_hosts: ${{ sectrets.KNOWN_HOSTS }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
       - name: check out with ssh
         run: git remote add 
         #run: git remote set-url origin git@github.com:b342203fc208d541378ff64b2236f55f.git
