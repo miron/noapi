@@ -21,7 +21,7 @@ jobs:
           jq -r '.rows[] | .url'`
           while read bp; do
             if sane=`curl -s -L -m 10 "$bp/bp.json"`; then
-              echo "$sane" | jq -j -r '.nodes | .[].api_endpoint | select(. == null | not) + " "' || continue
+              echo "$sane" | jq -j -r '.producer_account_name, .nodes[].api_endpoint | select(. == null | not) + " "' || continue
               printf " \n"
             else
               continue
