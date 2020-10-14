@@ -10,26 +10,9 @@ jobs:
   get_bps:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Install SSH key
-        uses: shimataro/ssh-key-action@v2
+      - uses: actions/checkout@master
         with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: ${{ secrets.KNOWN_HOSTS }}
-        run: |
-          git remote add gist git@github.com:b342203fc208d541378ff64b2236f55f.git
-          #git config --local user.name "miron"
-          git config --global user.name "miron"
-          git checkout master
-          #git add .
-          #git commit -m "fresh BP list"
-          #git push origin HEAD:master
-          git push -u gist master  
-      #- name: check out with ssh
-        #run: git remote set-url origin git@github.com:b342203fc208d541378ff64b2236f55f.git
-        #with:
-         # name: miron/b342203fc208d541378ff64b2236f55f
-          #token: ${{ secrets.my_pat }}
+          name: miron/b342203fc208d541378ff64b2236f55f
           #ref: refs/heads/release
       #- name: Clone Gist
         #run: git clone git@github.com:b342203fc208d541378ff64b2236f55f.git
@@ -52,20 +35,15 @@ jobs:
           do
             curl -s -L -m 10 $value/bp.json | jq -r '.nodes | .[].api_endpoint | select(. == null | not) + "  "' || continue
           done > BPs.md
-      #- name: Commit Files
-       # if: always()
-        #run: |
-         # git remote add gist git@github.com:b342203fc208d541378ff64b2236f55f.git
-          #git config --local user.name "miron"
-          #git config --global user.name "miron"
-          #git checkout master
-          #git add .
-          #git commit -m "fresh BP list"
-          #git push origin HEAD:master
-          #git push -u gist master
-      #- name: Push Changes
-       # if: always()
-        #uses: ad-m/github-push-action@master
-        #with:
-         # github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit Files
+        if: always()
+        run: |
+          git config --local user.name "miron"
+          git add .
+          git commit -m "fresh BP list"
+      - name: Push Changes
+        if: always()
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
