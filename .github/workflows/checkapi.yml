@@ -25,7 +25,7 @@ jobs:
             else
               continue
             fi
-          done <<< "$BP"
+          done <<< "$BPS"
       - name: Commit Files
         run: |
           git config --local user.name "miron"
