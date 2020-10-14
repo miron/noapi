@@ -1,3 +1,5 @@
+![API Check](https://github.com/miron/noapi/workflows/API%20Check/badge.svg)
+
 Scheduled Github Action checking every hour top 68 BPs on EOS for homepage    
 as returned by get_producers, appending bp.json and extracting api_endpoints.  
 Saved as gist: [git.io/API](https://git.io/API "Block Producer APIs")  
