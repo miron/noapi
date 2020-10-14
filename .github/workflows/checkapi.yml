@@ -10,9 +10,15 @@ jobs:
   get_bps:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ sectrets.SSH_PRIVATE_KEY }}
+          known_hosts: ${{ sectrets.KNOWN_HOSTS }}
       - name: check out with ssh
-        run: git remote set-url origin git@github.com:b342203fc208d541378ff64b2236f55f.git
+        run: git remote add 
+        #run: git remote set-url origin git@github.com:b342203fc208d541378ff64b2236f55f.git
         #with:
          # name: miron/b342203fc208d541378ff64b2236f55f
           #token: ${{ secrets.my_pat }}
@@ -41,10 +47,14 @@ jobs:
       - name: Commit Files
         if: always()
         run: |
-          git config --local user.name "miron"
-          git add .
-          git commit -m "fresh BP list"
-          git push origin HEAD:master
+          git remote add origin git@github.com:b342203fc208d541378ff64b2236f55f.git
+          #git config --local user.name "miron"
+          git config --global user.name "miron"
+          git checkout master
+          #git add .
+          #git commit -m "fresh BP list"
+          #git push origin HEAD:master
+          git push -u origin master
       #- name: Push Changes
        # if: always()
         #uses: ad-m/github-push-action@master
