@@ -24,8 +24,8 @@ jobs:
               jq -j -r '.producer_account_name + " "' <<< $sane || continue
               jq -j -r 'if (.org.social.github | length) > 0  then "[@"+.org.social.github+"](https://github.com/"+.org.social.github+")" else empty end + " "' <<< $sane || continue
               jq -j -r 'if (.org.social.github_user | length) > 0 then "[@"+.org.social.github_user+"](https://github.com/"+.org.social.github_user+")" else empty end + " "' <<< $sane || continue 
-              jq -j -r '[.nodes[]|select(.api_endpoint)| .api_endpoint]|unique[]' <<< $sane || continue
-              printf "  \n"
+              jq -j -r '[.nodes[]|select(.api_endpoint)| .api_endpoint]|unique[] + " "' <<< $sane || continue
+              printf " \n"
             else
               continue
             fi
