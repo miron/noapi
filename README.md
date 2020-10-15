@@ -1,7 +1,7 @@
 ![API Check](https://github.com/miron/noapi/workflows/API%20Check/badge.svg)
 
-Scheduled Github Action checking every hour top 69 BPs on EOS for homepage    
-as returned by get_producers, appending bp.json and extracting api_endpoints.  
+Scheduled Github Action which checks the top 69 BPs on EOS for  
+homepage (as returned by get_producers), appends bp.json and extracts api_endpoints.  
 Saved as gist: [git.io/eosapi](https://git.io/eosapi "Block Producer APIs")  
 ToDo:  
  - check sites for other locations than main path for bp.json  
