@@ -23,8 +23,8 @@ jobs:
             if sane=`curl -s -L -m 10 -k "$bp/bp.json"`; then
               echo "$sane" | 
               jq -j -r '.producer_account_name, 
-              if (.org.social.github | length) > 0  then "@"+.org.social.github else empty end, 
-              if (.org.social.github_user | length) > 0 then "@"+.org.social.github_user else empty end, 
+              if (.org.social.github | length) > 0  then "[@"+.org.social.github+"](https://github.com/"+.org.social.github+")" else empty end, 
+              if (.org.social.github_user | length) > 0 then "[@"+.org.social.github_user+"](https://github.com/"+.org.social.github_user+")" else empty end, 
               .nodes[].api_endpoint | select(. == null | not) + " "' || continue
               printf " \n"
             else
