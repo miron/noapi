@@ -8,4 +8,4 @@ ToDo:
  - check for payment so that BPs are not at fixed 68 value  
  - rotate used api for curl  
           
-{% gist b342203fc208d541378ff64b2236f55f BPs.md %}
+{% gist b342203fc208d541378ff64b2236f55f BP.md %}
