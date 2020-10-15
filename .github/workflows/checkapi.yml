@@ -3,7 +3,7 @@ name: API Endpoint Check
 on: 
   #push:
   schedule:
-    - cron:  '*/60 * * * *'
+    - cron:  '0 */2 * * *'
 
 jobs:
   get_bps:
