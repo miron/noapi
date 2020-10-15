@@ -2,7 +2,7 @@
 
 Scheduled Github Action checking every hour top 68 BPs on EOS for homepage    
 as returned by get_producers, appending bp.json and extracting api_endpoints.  
-Saved as gist: [git.io/API](https://git.io/API "Block Producer APIs")  
+Saved as gist: [git.io/eosapi](https://git.io/eosapi "Block Producer APIs")  
 ToDo:  
  - check sites for other locations than main path for bp.json  
  - check for payment so that BPs are not at fixed 68 value  
