@@ -22,5 +22,5 @@ ToDo:
  http://snzholding.com/ No bp.json on site  
  https://ecoboost.app/ Server Not found  
 
-          
-{% gist b342203fc208d541378ff64b2236f55f %}
+<script src="https://gist.github.com/miron/b342203fc208d541378ff64b2236f55f.js"></script>
+
