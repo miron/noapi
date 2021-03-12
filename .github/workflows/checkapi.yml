@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Gist
-        uses: actions/checkout@d1cef55e
+        uses: actions/checkout@d1cef55e46a14dd142cb1ee9a135e22d9b991e35
         with:
           gist: miron/b342203fc208d541378ff64b2236f55f
           ssh-key: ${{ secrets.SSH_KEY }}
