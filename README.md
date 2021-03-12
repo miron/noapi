@@ -11,24 +11,24 @@ ToDo:
  - check for payment so that BPs are not at fixed 68 value  
  - rotate used api for curl  
  - Following BP urls show unexpected behavior:  
-   eosiosg11111 https://eosio.sg curl: (52) Empty reply from server, has bp.json
-   eoslambdacom https://bridgepool.lambda.im/ Action doesn't return anything, works in cli and has bp.json
+   eosiosg11111 https://eosio.sg curl: (52) Empty reply from server, has bp.json  
+   eoslambdacom https://bridgepool.lambda.im/ Action doesn't return anything, works in cli and has bp.json  
    cochainworld https://eoscochain.io Server Not Found  
    truststaking https://www.binance.com No bp.json on site  
-   hoo.com https://hoo.com Has bp.json, works on cli but no return from action
+   hoo.com https://hoo.com Has bp.json, works on cli but no return from action  
    certikeosorg https://certik.org homepage loads too slow for script, but no bp.json on site  
    bp.pizza https://pizza.finance has bp.json, works on cli but no return from action 
-   eossnzpoolbp http://snzholding.com/ No bp.json on site
+   eossnzpoolbp http://snzholding.com/ No bp.json on site  
    validatoreos http://validatoreos.xyz Timeout  
    ecoboost1111 https://ecoboost.app/ Server not found  
-   eosbixinboot https://www.eosbixin.com/ has bp.json
-   dexeosbpnode https://dexeos.io/ Server not found
-   eosx.game https://chaingame.club/ no bp.json
-   eosrainbowbp https://bloks.io/eosrainbow.xyz no site, no bp.json
+   eosbixinboot https://www.eosbixin.com/ has bp.json  
+   dexeosbpnode https://dexeos.io/ Server not found  
+   eosx.game https://chaingame.club/ no bp.json  
+   eosrainbowbp https://bloks.io/eosrainbow.xyz no site, no bp.json  
    eoshenzhenio https://info.eoshenzhen.io:1443 Timeout  
-   geosoneforbp https://www.geos.one timeout
+   geosoneforbp https://www.geos.one timeout  
    hexlantttttt https://hexbp.com Server Not found  
-   eosathenabp1 http://athenbp.club/ timeout
+   eosathenabp1 http://athenbp.club/ timeout  
 
 
 Summary of BPs without bp.json:  
