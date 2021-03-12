@@ -31,19 +31,19 @@ ToDo:
    eosathenabp1 http://athenbp.club/ timeout
 
 
-Summary of BPs without bp.json:
-big.one
-cochainworld
-truststaking
-certikeosorg
-eossnzpoolbp
-validatoreos
-ecoboost1111
-dexeosbpnode
-eosx.game
-eosrainbowbp
-eoshenzhenio
-geosoneforbp
-hexlantttttt
-eosathenabp1
+Summary of BPs without bp.json:  
+big.one  
+cochainworld  
+truststaking  
+certikeosorg  
+eossnzpoolbp  
+validatoreos  
+ecoboost1111  
+dexeosbpnode  
+eosx.game  
+eosrainbowbp  
+eoshenzhenio  
+geosoneforbp  
+hexlantttttt  
+eosathenabp1  
 
