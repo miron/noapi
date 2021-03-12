@@ -10,17 +10,40 @@ ToDo:
  - check sites for other locations than main path for bp.json  
  - check for payment so that BPs are not at fixed 68 value  
  - rotate used api for curl  
- - https://eosio.sg curl: (52) Empty reply from server  
- https://eoscochain.io Server Not Found  
- https://www.eosbeijing.one Server Not Found  
- https://certik.org No bp.json on site  
- https://www.binance.com No bp.json on site  
- https://www.geos.one Server Not Found  
- https://info.eoshenzhen.io:1443 Timeout  
- http://validatoreos.xyz Timeout  
- https://hexbp.com Server Not found  
- http://snzholding.com/ No bp.json on site  
- https://ecoboost.app/ Server Not found  
+ - Following BP urls show unexpected behavior:  
+   eosiosg11111 https://eosio.sg curl: (52) Empty reply from server, has bp.json
+   eoslambdacom https://bridgepool.lambda.im/ Action doesn't return anything, works in cli and has bp.json
+   cochainworld https://eoscochain.io Server Not Found  
+   truststaking https://www.binance.com No bp.json on site  
+   hoo.com https://hoo.com Has bp.json, works on cli but no return from action
+   certikeosorg https://certik.org homepage loads too slow for script, but no bp.json on site  
+   bp.pizza https://pizza.finance has bp.json, works on cli but no return from action 
+   eossnzpoolbp http://snzholding.com/ No bp.json on site
+   validatoreos http://validatoreos.xyz Timeout  
+   ecoboost1111 https://ecoboost.app/ Server not found  
+   eosbixinboot https://www.eosbixin.com/ has bp.json
+   dexeosbpnode https://dexeos.io/ Server not found
+   eosx.game https://chaingame.club/ no bp.json
+   eosrainbowbp https://bloks.io/eosrainbow.xyz no site, no bp.json
+   eoshenzhenio https://info.eoshenzhen.io:1443 Timeout  
+   geosoneforbp https://www.geos.one timeout
+   hexlantttttt https://hexbp.com Server Not found  
+   eosathenabp1 http://athenbp.club/ timeout
 
-<script src="https://gist.github.com/miron/b342203fc208d541378ff64b2236f55f.js"></script>
+
+Summary of BPs without bp.json:
+big.one
+cochainworld
+truststaking
+certikeosorg
+eossnzpoolbp
+validatoreos
+ecoboost1111
+dexeosbpnode
+eosx.game
+eosrainbowbp
+eoshenzhenio
+geosoneforbp
+hexlantttttt
+eosathenabp1
 
